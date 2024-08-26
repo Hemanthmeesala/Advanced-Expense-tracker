@@ -46,7 +46,7 @@ function displayExpenses() {
 
     expenses.forEach((expense) => {
         const li = document.createElement('li');
-        li.textContent = `${expense.date} - ${expense.name}: $${expense.amount.toFixed(2)}`;
+        li.textContent = `${expense.date} - ${expense.name}: ₹${expense.amount.toFixed(2)}`;
         expenseItems.appendChild(li);
     });
 }
