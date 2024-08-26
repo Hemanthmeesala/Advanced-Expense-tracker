@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        
+        <!-- Form to add new expense -->
+        <div class="expense-form">
+            <input type="date" id="expense-date" required>
+            <input type="text" id="expense-name" placeholder="Expense Name" required>
+            <input type="number" id="expense-amount" placeholder="Amount" required>
+            <button onclick="addExpense()">Add Expense</button>
+        </div>
+
+        <!-- Filter Form -->
+        <div class="filter-form">
+            <h2>Filter Expenses</h2>
+            <input type="date" id="filter-start-date" placeholder="Start Date">
+            <input type="date" id="filter-end-date" placeholder="End Date">
+            <input type="text" id="filter-name" placeholder="Expense Name">
+            <button onclick="filterExpenses()">Filter Expenses</button>
+        </div>
+
+        <!-- Calendar to track expenses -->
+        <div class="calendar-container">
+            <h2>Expense Calendar</h2>
+            <div class="calendar-header">
+                <button id="prev-month">❮</button>
+                <div id="calendar-title"></div>
+                <button id="next-month">❯</button>
+            </div>
+            <div id="calendar"></div>
+        </div>
+
+        <!-- Display expenses -->
+        <div class="expense-list">
+            <h2>Expenses</h2>
+            <ul id="expense-items"></ul>
+        </div>
+
+        <!-- Display weekly and monthly expenditures -->
+        <div class="expenditure-summary">
+            <h2>Summary</h2>
+            <p>Weekly Expenditure: <span id="weekly-expenditure">0</span></p>
+            <p>Monthly Expenditure: <span id="monthly-expenditure">0</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

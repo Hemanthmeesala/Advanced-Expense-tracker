@@ -1,0 +1,206 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6D83F2, #A7BFE8);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+/* Header Styles */
+h1, h2 {
+    text-align: center;
+    color: #444444;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.expense-form, .calendar-container, .expense-list, .expenditure-summary {
+    margin-bottom: 25px;
+}
+
+input[type="text"], input[type="number"], input[type="date"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="date"]:focus {
+    border-color: #6D83F2;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #6D83F2, #A7BFE8);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #576BE3, #8FA4E2);
+}
+
+/* Calendar Styles */
+.calendar-container {
+    width: 100%;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#calendar-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#prev-month, #next-month {
+    background: none;
+    border: none;
+    color: #444;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+#prev-month:hover, #next-month:hover {
+    color: #6D83F2;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+#calendar .day {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+}
+
+#calendar .day span {
+    font-weight: bold;
+}
+
+#calendar .day p {
+    margin: 5px 0 0;
+    font-size: 12px;
+}
+
+/* Expense List Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+li:nth-child(even) {
+    background-color: #e9ecef;
+}
+
+/* Summary Styles */
+.expenditure-summary {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.expenditure-summary p {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.expenditure-summary span {
+    font-weight: bold;
+    color: #6D83F2;
+}
+
+/* Filter Form Styles */
+.filter-form {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-form input[type="date"], .filter-form input[type="text"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.filter-form button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #6D83F2, #A7BFE8);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-form button:hover {
+    background: linear-gradient(135deg, #576BE3, #8FA4E2);
+}
+
